@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+/**
+ * Copyright (c) 2015, Alov Maxim <alovmax@yandex.ru>
+ * 
+ * All rights reserved.
+ * 
+ * Redistribution and use in source and binary forms, with or without modification, are permitted
+ * provided that the following conditions are met:
+ * 
+ * 1. Redistributions of source code must retain the above copyright notice, this list of conditions
+ * and the following disclaimer.
+ * 
+ * 2. Redistributions in binary form must reproduce the above copyright notice, this list of
+ * conditions and the following disclaimer in the documentation and/or other materials provided with
+ * the distribution.
+ * 
+ * 3. Neither the name of the copyright holder nor the names of its contributors may be used to
+ * endorse or promote products derived from this software without specific prior written permission.
+ * 
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR
+ * IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND
+ * FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR
+ * CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+ * DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+ * WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY
+ * WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ */
+ -->
+ 
+<resources>
+    <color name="black">#000000</color>
+    <color name="grey">#CCCCCC</color>
+    <color name="white">#FFFFFF</color>
+    <color name="bright_pink">#FF007F</color>
+    <color name="red">#FF0000</color>
+    <color name="orange">#FF7F00</color>
+    <color name="yellow">#FFFF00</color>
+    <color name="chartreuse">#7FFF00</color>
+    <color name="green">#00FF00</color>
+    <color name="spring_green">#00FF7F</color>
+    <color name="cyan">#00FFFF</color>
+    <color name="azure">#007FFF</color>
+    <color name="blue">#0000FF</color>
+    <color name="violet">#7F00FF</color>
+    <color name="magenta">#FF00FF</color>
+    <color name="meshlab">#6666CF</color>
+    <color name="android_blue_l">#33B5E5</color>
+    <color name="android_blue_d">#0099CC</color>
+    <color name="android_purple_l">#AA66CC</color>
+    <color name="android_purple_d">#9933CC</color>
+    <color name="android_green_l">#99CC00</color>
+    <color name="android_green_d">#669900</color>
+    <color name="android_orange_l">#FFBB33</color>
+    <color name="android_orange_d">#FFbb00</color>
+    <color name="android_red_l">#FF4444</color>
+    <color name="android_red_d">#CC0000</color>
+    
+    <!-- Color palette -->
+    <array name="palette">
+        <item>@color/black</item>
+        <item>@color/grey</item>
+        <item>@color/white</item>
+        <item>@color/bright_pink</item>
+        <item>@color/red</item>
+        <item>@color/orange</item>
+        <item>@color/yellow</item>
+        <item>@color/chartreuse</item>
+        <item>@color/green</item>
+        <item>@color/spring_green</item>
+        <item>@color/cyan</item>
+        <item>@color/azure</item>
+        <item>@color/blue</item>
+        <item>@color/violet</item>
+        <item>@color/magenta</item>
+        <item>@color/meshlab</item>
+        <item>@color/android_blue_l</item>
+        <item>@color/android_blue_d</item>
+        <item>@color/android_purple_l</item>
+        <item>@color/android_purple_d</item>
+        <item>@color/android_green_l</item>
+        <item>@color/android_green_d</item>
+        <item>@color/android_orange_l</item>
+        <item>@color/android_orange_d</item>
+        <item>@color/android_red_l</item>
+        <item>@color/android_red_d</item>
+    </array>
+    
+</resources>

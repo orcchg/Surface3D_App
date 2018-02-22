@@ -1,0 +1,1013 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+/**
+ * Copyright (c) 2015, Alov Maxim <alovmax@yandex.ru>
+ * 
+ * All rights reserved.
+ * 
+ * Redistribution and use in source and binary forms, with or without modification, are permitted
+ * provided that the following conditions are met:
+ * 
+ * 1. Redistributions of source code must retain the above copyright notice, this list of conditions
+ * and the following disclaimer.
+ * 
+ * 2. Redistributions in binary form must reproduce the above copyright notice, this list of
+ * conditions and the following disclaimer in the documentation and/or other materials provided with
+ * the distribution.
+ * 
+ * 3. Neither the name of the copyright holder nor the names of its contributors may be used to
+ * endorse or promote products derived from this software without specific prior written permission.
+ * 
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR
+ * IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND
+ * FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR
+ * CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+ * DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+ * WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY
+ * WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ */
+ -->
+ 
+<resources>
+    <string name="app_name">Surface3D</string>
+    
+    <string name="ask_importTitle">Select way to import</string>
+    <string name="ask_importFromAssets">Assets</string>
+    <string name="ask_importFromFilesystem">Filesystem</string>
+    
+    <string name="action_importFromFS">Import file</string>
+    <string name="action_pointCloud">Point cloud</string>
+    <string name="action_wireframe">Wireframe</string>
+    <string name="action_mesh">Mesh</string>
+    <string name="action_drop">Drop</string>
+    <string name="action_clear">Clear</string>
+    <string name="action_showAxis">Show axis</string>
+    <string name="action_hideAxis">Hide axis</string>
+    <string name="action_info">Model info</string>
+    
+    <!-- Color palette -->
+    <string name="color_black">Black</string>
+    <string name="color_grey">Grey</string>
+    <string name="color_white">White</string>
+    <string name="color_bright_pink">Pink</string>
+    <string name="color_red">Red</string>
+    <string name="color_orange">Orange</string>
+    <string name="color_yellow">Yellow</string>
+    <string name="color_chartreuse">Chartreuse</string>
+    <string name="color_green">Green</string>
+    <string name="color_spring_green">Spring</string>
+    <string name="color_cyan">Cyan</string>
+    <string name="color_azure">Azure</string>
+    <string name="color_blue">Blue</string>
+    <string name="color_violet">Violet</string>
+    <string name="color_magenta">Magenta</string>
+    <string name="color_meshlab">Meshlab</string>
+    <string name="color_android_blue_l">ABlueL</string>
+    <string name="color_android_blue_d">ABlueD</string>
+    <string name="color_android_purple_l">APurpleL</string>
+    <string name="color_android_purple_d">APurpleD</string>
+    <string name="color_android_green_l">AGreenL</string>
+    <string name="color_android_green_d">AGreenD</string>
+    <string name="color_android_orange_l">AOrangeL</string>
+    <string name="color_android_orange_d">AOrangeD</string>
+    <string name="color_android_red_l">ARedL</string>
+    <string name="color_android_red_d">ARedD</string>
+    
+    <array name="palette_names">
+        <item>@string/color_black</item>
+        <item>@string/color_grey</item>
+        <item>@string/color_white</item>
+        <item>@string/color_bright_pink</item>
+        <item>@string/color_red</item>
+        <item>@string/color_orange</item>
+        <item>@string/color_yellow</item>
+        <item>@string/color_chartreuse</item>
+        <item>@string/color_green</item>
+        <item>@string/color_spring_green</item>
+        <item>@string/color_cyan</item>
+        <item>@string/color_azure</item>
+        <item>@string/color_blue</item>
+        <item>@string/color_violet</item>
+        <item>@string/color_magenta</item>
+        <item>@string/color_meshlab</item>
+        <item>@string/color_android_blue_l</item>
+        <item>@string/color_android_blue_d</item>
+        <item>@string/color_android_purple_l</item>
+        <item>@string/color_android_purple_d</item>
+        <item>@string/color_android_green_l</item>
+        <item>@string/color_android_green_d</item>
+        <item>@string/color_android_orange_l</item>
+        <item>@string/color_android_orange_d</item>
+        <item>@string/color_android_red_l</item>
+        <item>@string/color_android_red_d</item>
+    </array>
+    
+    <!-- Material / Texture types -->
+    <string name="material_filetype_MTL">.MTL</string>
+    <string name="material_filetype_MTL_s">.mtl</string>
+    <array name="materials_filetypes">
+        <item>@string/material_filetype_MTL</item>
+        <item>@string/material_filetype_MTL_s</item>
+    </array>
+    
+    <string name="texture_filetype_BMP">.BMP</string>
+    <string name="texture_filetype_BMP_s">.bmp</string>
+    <string name="texture_filetype_CUT">.CUT</string>
+    <string name="texture_filetype_CUT_s">.cut</string>
+    <string name="texture_filetype_DDS">.DDS</string>
+    <string name="texture_filetype_DDS_s">.dds</string>
+    <string name="texture_filetype_DOOM">.DOOM</string>
+    <string name="texture_filetype_DOOM_s">.doom</string>
+    <string name="texture_filetype_EXR">.EXR</string>
+    <string name="texture_filetype_EXR_s">.exr</string>
+    <string name="texture_filetype_HDR">.HDR</string>
+    <string name="texture_filetype_HDR_s">.hdr</string>
+    <string name="texture_filetype_GIF">.GIF</string>
+    <string name="texture_filetype_GIF_s">.gif</string>
+    <string name="texture_filetype_ICO">.ICO</string>
+    <string name="texture_filetype_ICO_s">.ico</string>
+    <string name="texture_filetype_JP2">.JP2</string>
+    <string name="texture_filetype_JP2_s">.jp2</string>
+    <string name="texture_filetype_JPG">.JPG</string>
+    <string name="texture_filetype_JPG_s">.jpg</string>
+    <string name="texture_filetype_LBM">.LBM</string>
+    <string name="texture_filetype_LBM_s">.lbm</string>
+    <string name="texture_filetype_MDL">.MDL</string>
+    <string name="texture_filetype_MDL_s">.mdl</string>
+    <string name="texture_filetype_MNG">.MNG</string>
+    <string name="texture_filetype_MNG_s">.mng</string>
+    <string name="texture_filetype_PAL">.PAL</string>
+    <string name="texture_filetype_PAL_s">.pal</string>
+    <string name="texture_filetype_PBM">.PBM</string>
+    <string name="texture_filetype_PBM_s">.pbm</string>
+    <string name="texture_filetype_PCD">.PCD</string>
+    <string name="texture_filetype_PCD_s">.pcd</string>
+    <string name="texture_filetype_PCX">.PCX</string>
+    <string name="texture_filetype_PCX_s">.PCX</string>
+    <string name="texture_filetype_PGM">.PGM</string>
+    <string name="texture_filetype_PGM_s">.pgm</string>
+    <string name="texture_filetype_PIC">.PIC</string>
+    <string name="texture_filetype_PIC_s">.pic</string>
+    <string name="texture_filetype_PNG">.PNG</string>
+    <string name="texture_filetype_PNG_s">.png</string>
+    <string name="texture_filetype_PPM">.PPM</string>
+    <string name="texture_filetype_PPM_s">.ppm</string>
+    <string name="texture_filetype_PSD">.PSD</string>
+    <string name="texture_filetype_PSD_s">.psd</string>
+    <string name="texture_filetype_PSP">.PSP</string>
+    <string name="texture_filetype_PSP_s">.psp</string>
+    <string name="texture_filetype_RAW">.RAW</string>
+    <string name="texture_filetype_RAW_s">.raw</string>
+    <string name="texture_filetype_SGI">.SGI</string>
+    <string name="texture_filetype_SGI_s">.sgi</string>
+    <string name="texture_filetype_TGA">.TGA</string>
+    <string name="texture_filetype_TGA_s">.tga</string>
+    <string name="texture_filetype_TIF">.TIF</string>
+    <string name="texture_filetype_TIF_s">.tif</string>
+    <array name="textures_filetypes">
+        <item>@string/texture_filetype_BMP</item>
+        <item>@string/texture_filetype_BMP_s</item>
+        <item>@string/texture_filetype_CUT</item>
+        <item>@string/texture_filetype_CUT_s</item>
+        <item>@string/texture_filetype_DDS</item>
+        <item>@string/texture_filetype_DDS_s</item>
+        <item>@string/texture_filetype_DOOM</item>
+        <item>@string/texture_filetype_DOOM_s</item>
+        <item>@string/texture_filetype_EXR</item>
+        <item>@string/texture_filetype_EXR_s</item>
+        <item>@string/texture_filetype_HDR</item>
+        <item>@string/texture_filetype_HDR_s</item>
+        <item>@string/texture_filetype_GIF</item>
+        <item>@string/texture_filetype_GIF_s</item>
+        <item>@string/texture_filetype_ICO</item>
+        <item>@string/texture_filetype_ICO_s</item>
+        <item>@string/texture_filetype_JP2</item>
+        <item>@string/texture_filetype_JP2_s</item>
+        <item>@string/texture_filetype_JPG</item>
+        <item>@string/texture_filetype_JPG_s</item>
+        <item>@string/texture_filetype_LBM</item>
+        <item>@string/texture_filetype_LBM_s</item>
+        <item>@string/texture_filetype_MDL</item>
+        <item>@string/texture_filetype_MDL_s</item>
+        <item>@string/texture_filetype_MNG</item>
+        <item>@string/texture_filetype_MNG_s</item>
+        <item>@string/texture_filetype_PAL</item>
+        <item>@string/texture_filetype_PAL_s</item>
+        <item>@string/texture_filetype_PBM</item>
+        <item>@string/texture_filetype_PBM_s</item>
+        <item>@string/texture_filetype_PCD</item>
+        <item>@string/texture_filetype_PCD_s</item>
+        <item>@string/texture_filetype_PCX</item>
+        <item>@string/texture_filetype_PCX_s</item>
+        <item>@string/texture_filetype_PGM</item>
+        <item>@string/texture_filetype_PGM_s</item>
+        <item>@string/texture_filetype_PIC</item>
+        <item>@string/texture_filetype_PIC_s</item>
+        <item>@string/texture_filetype_PNG</item>
+        <item>@string/texture_filetype_PNG_s</item>
+        <item>@string/texture_filetype_PPM</item>
+        <item>@string/texture_filetype_PPM_s</item>
+        <item>@string/texture_filetype_PSD</item>
+        <item>@string/texture_filetype_PSD_s</item>
+        <item>@string/texture_filetype_PSP</item>
+        <item>@string/texture_filetype_PSP_s</item>
+        <item>@string/texture_filetype_RAW</item>
+        <item>@string/texture_filetype_RAW_s</item>
+        <item>@string/texture_filetype_SGI</item>
+        <item>@string/texture_filetype_SGI_s</item>
+        <item>@string/texture_filetype_TGA</item>
+        <item>@string/texture_filetype_TGA_s</item>
+        <item>@string/texture_filetype_TIF</item>
+        <item>@string/texture_filetype_TIF_s</item>
+    </array>
+    
+    <!-- Models types -->
+    <string name="model_filetype_3D">.3D</string>
+    <string name="model_filetype_3D_s">.3d</string>
+    <string name="model_filetype_3DS">.3DS</string>
+    <string name="model_filetype_3DS_s">.3ds</string>
+    <string name="model_filetype_AC">.AC</string>
+    <string name="model_filetype_AC_s">.ac</string>
+    <string name="model_filetype_ASE">.ASE</string>
+    <string name="model_filetype_ASE_s">.ase</string>
+    <string name="model_filetype_B3D">.B3D</string>
+    <string name="model_filetype_B3D_s">.b3d</string>
+    <string name="model_filetype_BLEND">.BLEND</string>
+    <string name="model_filetype_BLEND_s">.blend</string>
+    <string name="model_filetype_BVH">.BVH</string>
+    <string name="model_filetype_BVH_s">.bvh</string>
+    <string name="model_filetype_COB">.COB</string>
+    <string name="model_filetype_COB_s">.cob</string>
+    <string name="model_filetype_Collada">.DAE</string>
+    <string name="model_filetype_Collada_s">.dae</string>
+    <string name="model_filetype_CSM">.CSM</string>
+    <string name="model_filetype_CSM_s">.csm</string>
+    <string name="model_filetype_DXF">.DXF</string>
+    <string name="model_filetype_DXF_s">.dxf</string>
+    <string name="model_filetype_HMP">.HMP</string>
+    <string name="model_filetype_HMP_s">.hmp</string>
+    <string name="model_filetype_IFC">.IFC</string>
+    <string name="model_filetype_IFC_s">.ifc</string>
+    <string name="model_filetype_IRR">.IRR</string>
+    <string name="model_filetype_IRR_s">.irr</string>
+    <string name="model_filetype_IRRMesh">.IRRMesh</string>
+    <string name="model_filetype_IRRMesh_s">.irrmesh</string>
+    <string name="model_filetype_LWO">.LWO</string>
+    <string name="model_filetype_LWO_s">.lwo</string>
+    <string name="model_filetype_LWS">.LWS</string>
+    <string name="model_filetype_LWS_s">.lws</string>
+    <string name="model_filetype_MD2">.MD2</string>
+    <string name="model_filetype_MD2_s">.md2</string>
+    <string name="model_filetype_MD5">.MD5</string>
+    <string name="model_filetype_MD5_s">.md5</string>
+    <string name="model_filetype_MDL">.MDL</string>
+    <string name="model_filetype_MDL_s">.mdl</string>
+    <string name="model_filetype_MS3D">.MS3D</string>
+    <string name="model_filetype_MS3D_s">.ms3d</string>
+    <string name="model_filetype_NFF">.NFF</string>
+    <string name="model_filetype_NFF_s">.nff</string>
+    <string name="model_filetype_OBJ">.OBJ</string>
+    <string name="model_filetype_OBJ_s">.obj</string>
+    <string name="model_filetype_OFF">.OFF</string>
+    <string name="model_filetype_OFF_s">.off</string>
+    <string name="model_filetype_Ogre">.Ogre</string>
+    <string name="model_filetype_Ogre_s">.ogre</string>
+    <string name="model_filetype_PLY">.PLY</string>
+    <string name="model_filetype_PLY_s">.ply</string>
+    <string name="model_filetype_Q3D">.Q3D</string>
+    <string name="model_filetype_Q3D_s">.q3d</string>
+    <string name="model_filetype_RAW">.RAW</string>
+    <string name="model_filetype_RAW_s">.raw</string>
+    <string name="model_filetype_SMD">.SMD</string>
+    <string name="model_filetype_SMD_s">.smd</string>
+    <string name="model_filetype_STL">.STL</string>
+    <string name="model_filetype_STL_s">.stl</string>
+    <string name="model_filetype_TER">.TER</string>
+    <string name="model_filetype_TER_s">.ter</string>
+    <string name="model_filetype_WRL">.WRL</string>
+    <string name="model_filetype_WRL_s">.wrl</string>
+    <string name="model_filetype_X">.X</string>
+    <string name="model_filetype_X_s">.x</string>
+    <string name="model_filetype_XGL">.XGL</string>
+    <string name="model_filetype_XGL_s">.xgl</string>
+    <array name="models_filetypes">
+        <item>@string/model_filetype_3D</item>
+	    <item>@string/model_filetype_3D_s</item>
+	    <item>@string/model_filetype_3DS</item>
+	    <item>@string/model_filetype_3DS_s</item>
+	    <item>@string/model_filetype_AC</item>
+	    <item>@string/model_filetype_AC_s</item>
+	    <item>@string/model_filetype_ASE</item>
+	    <item>@string/model_filetype_ASE_s</item>
+	    <item>@string/model_filetype_B3D</item>
+	    <item>@string/model_filetype_B3D_s</item>
+	    <item>@string/model_filetype_BLEND</item>
+	    <item>@string/model_filetype_BLEND_s</item>
+	    <item>@string/model_filetype_BVH</item>
+	    <item>@string/model_filetype_BVH_s</item>
+	    <item>@string/model_filetype_COB</item>
+	    <item>@string/model_filetype_COB_s</item>
+	    <item>@string/model_filetype_Collada</item>
+	    <item>@string/model_filetype_Collada_s</item>
+	    <item>@string/model_filetype_CSM</item>
+	    <item>@string/model_filetype_CSM_s</item>
+	    <item>@string/model_filetype_DXF</item>
+	    <item>@string/model_filetype_DXF_s</item>
+	    <item>@string/model_filetype_HMP</item>
+	    <item>@string/model_filetype_HMP_s</item>
+	    <item>@string/model_filetype_IFC</item>
+	    <item>@string/model_filetype_IFC_s</item>
+	    <item>@string/model_filetype_IRR</item>
+	    <item>@string/model_filetype_IRR_s</item>
+	    <item>@string/model_filetype_IRRMesh</item>
+	    <item>@string/model_filetype_IRRMesh_s</item>
+	    <item>@string/model_filetype_LWO</item>
+	    <item>@string/model_filetype_LWO_s</item>
+	    <item>@string/model_filetype_LWS</item>
+	    <item>@string/model_filetype_LWS_s</item>
+	    <item>@string/model_filetype_MD2</item>
+	    <item>@string/model_filetype_MD2_s</item>
+	    <item>@string/model_filetype_MD5</item>
+	    <item>@string/model_filetype_MD5_s</item>
+	    <item>@string/model_filetype_MDL</item>
+	    <item>@string/model_filetype_MDL_s</item>
+	    <item>@string/model_filetype_MS3D</item>
+	    <item>@string/model_filetype_MS3D_s</item>
+	    <item>@string/model_filetype_NFF</item>
+	    <item>@string/model_filetype_NFF_s</item>
+	    <item>@string/model_filetype_OBJ</item>
+	    <item>@string/model_filetype_OBJ_s</item>
+	    <item>@string/model_filetype_OFF</item>
+	    <item>@string/model_filetype_OFF_s</item>
+	    <item>@string/model_filetype_Ogre</item>
+	    <item>@string/model_filetype_Ogre_s</item>
+	    <item>@string/model_filetype_PLY</item>
+	    <item>@string/model_filetype_PLY_s</item>
+	    <item>@string/model_filetype_Q3D</item>
+	    <item>@string/model_filetype_Q3D_s</item>
+	    <item>@string/model_filetype_RAW</item>
+	    <item>@string/model_filetype_RAW_s</item>
+	    <item>@string/model_filetype_SMD</item>
+	    <item>@string/model_filetype_SMD_s</item>
+	    <item>@string/model_filetype_STL</item>
+	    <item>@string/model_filetype_STL_s</item>
+	    <item>@string/model_filetype_TER</item>
+	    <item>@string/model_filetype_TER_s</item>
+	    <item>@string/model_filetype_WRL</item>
+	    <item>@string/model_filetype_WRL_s</item>
+	    <item>@string/model_filetype_X</item>
+	    <item>@string/model_filetype_X_s</item>
+	    <item>@string/model_filetype_XGL</item>
+	    <item>@string/model_filetype_XGL_s</item>
+    </array>
+    
+    <string name="model_folder_3D">3D</string>
+    <string name="model_folder_3DS">3DS</string>
+    <string name="model_folder_AC">AC</string>
+    <string name="model_folder_ASE">ASE</string>
+    <string name="model_folder_B3D">B3D</string>
+    <string name="model_folder_BLEND">BLEND</string>
+    <string name="model_folder_BVH">BVH</string>
+    <string name="model_folder_COB">COB</string>
+    <string name="model_folder_Collada">Collada</string>
+    <string name="model_folder_CSM">CSM</string>
+    <string name="model_folder_DXF">DXF</string>
+    <string name="model_folder_HMP">HMP</string>
+    <string name="model_folder_IFC">IFC</string>
+    <string name="model_folder_IRR">IRR</string>
+    <string name="model_folder_IRRMesh">IRRMesh</string>
+    <string name="model_folder_LWO">LWO</string>
+    <string name="model_folder_LWS">LWS</string>
+    <string name="model_folder_MD2">MD2</string>
+    <string name="model_folder_MD5">MD5</string>
+    <string name="model_folder_MDL">MDL</string>
+    <string name="model_folder_MS3D">MS3D</string>
+    <string name="model_folder_NFF">NFF</string>
+    <string name="model_folder_OBJ">OBJ</string>
+    <string name="model_folder_FurnitureOBJ">FurnitureOBJ</string>
+    <string name="model_folder_OFF">OFF</string>
+    <string name="model_folder_Ogre">Ogre</string>
+    <string name="model_folder_PLY">PLY</string>
+    <string name="model_folder_Q3D">Q3D</string>
+    <string name="model_folder_RAW">RAW</string>
+    <string name="model_folder_SMD">SMD</string>
+    <string name="model_folder_STL">STL</string>
+    <string name="model_folder_TER">TER</string>
+    <string name="model_folder_WRL">WRL</string>
+    <string name="model_folder_X">X</string>
+    <string name="model_folder_XGL">XGL</string>
+    
+    <array name="models_folders">
+        <!--<item>@string/model_folder_3D</item>-->
+        <item>@string/model_folder_3DS</item>
+        <item>@string/model_folder_AC</item>
+        <!--<item>@string/model_folder_ASE</item>-->
+        <!--<item>@string/model_folder_B3D</item>-->
+        <item>@string/model_folder_BLEND</item>
+        <!--<item>@string/model_folder_BVH</item>-->
+        <item>@string/model_folder_COB</item>
+        <item>@string/model_folder_Collada</item>
+        <!--<item>@string/model_folder_CSM</item>-->
+        <item>@string/model_folder_DXF</item>
+        <!--<item>@string/model_folder_FurnitureOBJ</item>-->
+        <item>@string/model_folder_HMP</item>
+        <!--<item>@string/model_folder_IFC</item>
+        <item>@string/model_folder_IRR</item>
+        <item>@string/model_folder_IRRMesh</item>
+        <item>@string/model_folder_LWO</item>
+        <item>@string/model_folder_LWS</item>-->
+        <item>@string/model_folder_MD2</item>
+        <item>@string/model_folder_MD5</item>
+        <item>@string/model_folder_MDL</item>
+        <item>@string/model_folder_MS3D</item>
+        <item>@string/model_folder_NFF</item>
+        <item>@string/model_folder_OBJ</item>
+        <item>@string/model_folder_OFF</item>
+        <!--<item>@string/model_folder_Ogre</item>-->
+        <item>@string/model_folder_PLY</item>
+        <item>@string/model_folder_Q3D</item>
+        <item>@string/model_folder_RAW</item>
+        <item>@string/model_folder_SMD</item>
+        <item>@string/model_folder_STL</item>
+        <!--<item>@string/model_folder_TER</item>-->
+        <!--<item>@string/model_folder_WRL</item>-->
+        <!--<item>@string/model_folder_X</item>-->
+        <item>@string/model_folder_XGL</item>
+    </array>
+    
+    <!-- Builtin models -->
+    <!-- 3D models -->
+    <array name="models_3D">
+    </array>
+    
+    <!-- 3DS models -->
+    <string name="model_3ds_aetoma3">aetoma3.3ds</string>
+    <string name="model_3DS_Bird">Bird.3DS</string>
+	<string name="model_3DS_black_oak2">black_oak2.3DS</string>
+	<string name="model_3DS_church_bell_tower">church_bell_tower.3DS</string>
+	<string name="model_3DS_diamont">diamont.3DS</string>
+	<string name="model_3DS_eastern_cottonwood4">eastern_cottonwood4.3DS</string>
+	<string name="model_3DS_fanpalm">fanpalm.3DS</string>
+	<string name="model_3DS_fisherboat">fisherboat.3DS</string>
+	<string name="model_3DS_greek_pelekys">greek_pelekys.3DS</string>
+    <string name="model_3ds_greek_sword">greek_sword.3ds</string>
+	<string name="model_3DS_Greek_trireme">Greek_trireme.3DS</string>
+	<string name="model_3ds_greek_vase">greek_vase.3ds</string>
+	<string name="model_3ds_horse">horse.3ds</string>
+	<string name="model_3DS_indian_tent">indian_tent.3DS</string>
+	<string name="model_3DS_lombardy_poplar1">lombardy_poplar1.3DS</string>
+	<string name="model_3ds_marine_rifle">marine_rifle.3ds</string>
+	<string name="model_3ds_shield4">shield4.3ds</string>
+	<string name="model_3ds_stili1">stili1.3ds</string>
+	<string name="model_3DS_tank">tank.3DS</string>
+	<array name="models_3DS">
+	    <item>@string/model_3ds_aetoma3</item>
+	    <item>@string/model_3DS_Bird</item>
+	    <item>@string/model_3DS_black_oak2</item>
+	    <item>@string/model_3DS_church_bell_tower</item>
+	    <item>@string/model_3DS_diamont</item>
+	    <item>@string/model_3DS_eastern_cottonwood4</item>
+	    <item>@string/model_3DS_fanpalm</item>
+	    <item>@string/model_3DS_fisherboat</item>
+	    <item>@string/model_3DS_greek_pelekys</item>
+	    <item>@string/model_3ds_greek_sword</item>
+	    <item>@string/model_3DS_Greek_trireme</item>
+	    <item>@string/model_3ds_greek_vase</item>
+	    <item>@string/model_3ds_horse</item>
+	    <item>@string/model_3DS_indian_tent</item>
+	    <item>@string/model_3DS_lombardy_poplar1</item>
+	    <item>@string/model_3ds_marine_rifle</item>
+	    <item>@string/model_3ds_shield4</item>
+	    <item>@string/model_3ds_stili1</item>
+	    <item>@string/model_3DS_tank</item>
+	</array>
+    
+    <!-- AC models -->
+    <string name="model_AC_Sphere">Sphere.ac</string>
+    <string name="model_AC_Wuson">Wuson.ac</string>
+    <array name="models_AC">
+        <item>@string/model_AC_Sphere</item>
+        <item>@string/model_AC_Wuson</item>
+    </array>
+    
+    <!-- ASE models -->
+    <array name="models_ASE">
+        
+    </array>
+    
+    <!-- B3D models -->
+    <array name="models_B3D">
+    </array>
+    
+    <!-- BLEND models -->
+    <string name="model_BLEND_Cube">Cube.blend</string>
+    <string name="model_BLEND_Human">Human.blend</string>
+    <string name="model_BLEND_NoisyCube">NoisyCube.blend</string>
+    <string name="model_BLEND_Suzanne">Suzanne.blend</string>
+    <string name="model_BLEND_Torus">Torus.blend</string>
+    <array name="models_BLEND">
+        <item>@string/model_BLEND_Cube</item>
+        <item>@string/model_BLEND_Human</item>
+        <item>@string/model_BLEND_NoisyCube</item>
+        <item>@string/model_BLEND_Suzanne</item>
+        <item>@string/model_BLEND_Torus</item>
+    </array>
+    
+    <!-- BVH models -->
+    <string name="model_BVH_Boxing_Toes">Boxing_Toes.bvh</string>
+    <array name="models_BVH">
+        <!--<item>@string/model_BVH_Boxing_Toes</item>-->
+    </array>
+    
+    <!-- COB models -->
+    <string name="model_COB_dwarf">dwarf.cob</string>
+    <string name="model_COB_molecule">molecule.cob</string>
+    <string name="model_COB_spider">spider.cob</string>
+    <array name="models_COB">
+        <item>@string/model_COB_dwarf</item>
+        <item>@string/model_COB_molecule</item>
+        <item>@string/model_COB_spider</item>
+    </array>
+    
+    <!-- Collada models -->
+    <string name="model_Collada_Collada">Collada.dae</string>
+    <string name="model_Collada_cube">cube.dae</string>
+    <string name="model_Collada_duck">duck.dae</string>
+    <string name="model_Collada_Figures">Figures.dae</string>
+    <string name="model_Collada_sphere">sphere.dae</string>
+    <string name="model_Collada_Tool">Tool.dae</string>
+    <array name="models_Collada">
+        <item>@string/model_Collada_Collada</item>
+        <item>@string/model_Collada_cube</item>
+        <item>@string/model_Collada_duck</item>
+        <item>@string/model_Collada_Figures</item>
+        <item>@string/model_Collada_sphere</item>
+        <item>@string/model_Collada_Tool</item>
+    </array>
+    
+    <!-- CSM models -->
+    <string name="model_CSM_ThomasFechten">ThomasFechten.csm</string>
+    <array name="models_CSM">
+        <!--<item>@string/model_CSM_ThomasFechten</item>-->
+    </array>
+    
+    <!-- DXF models -->
+    <string name="model_DXF_Egg">Egg.dxf</string>
+    <string name="model_DXF_Wuson">Wuson.dxf</string>
+    <array name="models_DXF">
+        <item>@string/model_DXF_Egg</item>
+        <item>@string/model_DXF_Wuson</item>
+    </array>
+    
+    <!-- FurnitureOBJ -->
+    <string name="model_FurnitureOBJ_bar_stool_2">bar_stool_2.obj</string>
+	<string name="model_FurnitureOBJ_bar_Stool">bar_Stool.obj</string>
+	<string name="model_FurnitureOBJ_bar_table">bar_table.obj</string>
+	<string name="model_FurnitureOBJ_bed1">bed1.obj</string>
+	<string name="model_FurnitureOBJ_bed2">bed2.obj</string>
+	<string name="model_FurnitureOBJ_bench1">bench1.obj</string>
+	<string name="model_FurnitureOBJ_bench4">bench4.obj</string>
+	<string name="model_FurnitureOBJ_bibliolamp">bibliolamp.obj</string>
+	<string name="model_FurnitureOBJ_chair1">chair1.obj</string>
+	<string name="model_FurnitureOBJ_commode_nightstand1">commode_nightstand1.obj</string>
+	<string name="model_FurnitureOBJ_commode_nightstand2">commode_nightstand2.obj</string>
+	<string name="model_FurnitureOBJ_commode_nightstand3">commode_nightstand3.obj</string>
+	<string name="model_FurnitureOBJ_consol1">consol1.obj</string>
+	<string name="model_FurnitureOBJ_couch1">couch1.obj</string>
+	<string name="model_FurnitureOBJ_door1">door1.obj</string>
+	<string name="model_FurnitureOBJ_doric1a">doric1a.obj</string>
+	<string name="model_FurnitureOBJ_doric2a">doric2a.obj</string>
+	<string name="model_FurnitureOBJ_doric3a">doric3a.obj</string>
+	<string name="model_FurnitureOBJ_doric4a">doric4a.obj</string>
+	<string name="model_FurnitureOBJ_doric5a">doric5a.obj</string>
+	<string name="model_FurnitureOBJ_doric6a">doric6a.obj</string>
+	<string name="model_FurnitureOBJ_drawer1">drawer1.obj</string>
+	<string name="model_FurnitureOBJ_dresser_chiffonier1">dresser_chiffonier1.obj</string>
+	<string name="model_FurnitureOBJ_dresser_chiffonier2">dresser_chiffonier2.obj</string>
+	<string name="model_FurnitureOBJ_dresser_chiffonier3">dresser_chiffonier3.obj</string>
+	<string name="model_FurnitureOBJ_dresser_chiffonier4">dresser_chiffonier4.obj</string>
+	<string name="model_FurnitureOBJ_entrance_shelter">entrance_shelter.obj</string>
+	<string name="model_FurnitureOBJ_fireplace1">fireplace1.obj</string>
+	<string name="model_FurnitureOBJ_fot01">fot01.obj</string>
+	<string name="model_FurnitureOBJ_fot05">fot05.obj</string>
+	<string name="model_FurnitureOBJ_fot06">fot06.obj</string>
+	<string name="model_FurnitureOBJ_fot07">fot07.obj</string>
+	<string name="model_FurnitureOBJ_fot08">fot08.obj</string>
+	<string name="model_FurnitureOBJ_gardenlight01">gardenlight01.obj</string>
+	<string name="model_FurnitureOBJ_gardenlight02">gardenlight02.obj</string>
+	<string name="model_FurnitureOBJ_glass_table">glass_table.obj</string>
+	<string name="model_FurnitureOBJ_greek_vase2">greek_vase2.obj</string>
+	<string name="model_FurnitureOBJ_greek_vase">greek_vase.obj</string>
+	<string name="model_FurnitureOBJ_guitar">guitar.obj</string>
+	<string name="model_FurnitureOBJ_helper_stool">helper_stool.obj</string>
+	<string name="model_FurnitureOBJ_lamp_living_room_2">lamp_living_room_2.obj</string>
+	<string name="model_FurnitureOBJ_lamp_living_room">lamp_living_room.obj</string>
+	<string name="model_FurnitureOBJ_lamp">lamp.obj</string>
+	<string name="model_FurnitureOBJ_mirror1">mirror1.obj</string>
+	<string name="model_FurnitureOBJ_mirror2">mirror2.obj</string>
+	<string name="model_FurnitureOBJ_mirror3">mirror3.obj</string>
+	<string name="model_FurnitureOBJ_mirror4">mirror4.obj</string>
+	<string name="model_FurnitureOBJ_mirror8">mirror8.obj</string>
+	<string name="model_FurnitureOBJ_mirror9">mirror9.obj</string>
+	<string name="model_FurnitureOBJ_monument_base">monument_base.obj</string>
+	<string name="model_FurnitureOBJ_office1">office1.obj</string>
+	<string name="model_FurnitureOBJ_playground1">playground1.obj</string>
+	<string name="model_FurnitureOBJ_playground2">playground2.obj</string>
+	<string name="model_FurnitureOBJ_playground3">playground3.obj</string>
+	<string name="model_FurnitureOBJ_railings">railings.obj</string>
+	<string name="model_FurnitureOBJ_railings_stucco">railings_stucco.obj</string>
+	<string name="model_FurnitureOBJ_saxofon">saxofon.obj</string>
+	<string name="model_FurnitureOBJ_shelves1">shelves1.obj</string>
+	<string name="model_FurnitureOBJ_shelves2">shelves2.obj</string>
+	<string name="model_FurnitureOBJ_shutter">shutter.obj</string>
+	<string name="model_FurnitureOBJ_sol_key">sol_key.obj</string>
+	<string name="model_FurnitureOBJ_spotlight01">spotlight01.obj</string>
+	<string name="model_FurnitureOBJ_table01">table01.obj</string>
+	<string name="model_FurnitureOBJ_table02">table02.obj</string>
+	<string name="model_FurnitureOBJ_table03">table03.obj</string>
+	<string name="model_FurnitureOBJ_table10">table10.obj</string>
+	<string name="model_FurnitureOBJ_table11">table11.obj</string>
+	<string name="model_FurnitureOBJ_table12">table12.obj</string>
+	<string name="model_FurnitureOBJ_table13">table13.obj</string>
+	<string name="model_FurnitureOBJ_table14">table14.obj</string>
+	<string name="model_FurnitureOBJ_table4">table4.obj</string>
+	<string name="model_FurnitureOBJ_table5">table5.obj</string>
+	<string name="model_FurnitureOBJ_table6">table6.obj</string>
+	<string name="model_FurnitureOBJ_table7">table7.obj</string>
+	<string name="model_FurnitureOBJ_table8">table8.obj</string>
+	<string name="model_FurnitureOBJ_table9">table9.obj</string>
+	<string name="model_FurnitureOBJ_trash_can_1">trash_can_1.obj</string>
+	<string name="model_FurnitureOBJ_trash_can_2">trash_can_2.obj</string>
+	<string name="model_FurnitureOBJ_trumpet">trumpet.obj</string>
+	<string name="model_FurnitureOBJ_violin">violin.obj</string>
+	<array name="models_FurnitureOBJ">
+	    <!--<item>@string/model_FurnitureOBJ_bar_stool_2</item>
+	    <item>@string/model_FurnitureOBJ_bar_Stool</item>
+	    <item>@string/model_FurnitureOBJ_bar_table</item>
+	    <item>@string/model_FurnitureOBJ_bed1</item>
+	    <item>@string/model_FurnitureOBJ_bed2</item>
+	    <item>@string/model_FurnitureOBJ_bench1</item>
+	    <item>@string/model_FurnitureOBJ_bench4</item>
+	    <item>@string/model_FurnitureOBJ_bibliolamp</item>
+	    <item>@string/model_FurnitureOBJ_chair1</item>
+	    <item>@string/model_FurnitureOBJ_commode_nightstand1</item>
+	    <item>@string/model_FurnitureOBJ_commode_nightstand2</item>
+	    <item>@string/model_FurnitureOBJ_commode_nightstand3</item>
+	    <item>@string/model_FurnitureOBJ_consol1</item>
+	    <item>@string/model_FurnitureOBJ_couch1</item>
+	    <item>@string/model_FurnitureOBJ_door1</item>
+	    <item>@string/model_FurnitureOBJ_doric1a</item>
+	    <item>@string/model_FurnitureOBJ_doric2a</item>
+	    <item>@string/model_FurnitureOBJ_doric3a</item>
+	    <item>@string/model_FurnitureOBJ_doric4a</item>
+	    <item>@string/model_FurnitureOBJ_doric5a</item>
+	    <item>@string/model_FurnitureOBJ_doric6a</item>
+	    <item>@string/model_FurnitureOBJ_drawer1</item>
+	    <item>@string/model_FurnitureOBJ_dresser_chiffonier1</item>
+	    <item>@string/model_FurnitureOBJ_dresser_chiffonier2</item>
+	    <item>@string/model_FurnitureOBJ_dresser_chiffonier3</item>
+	    <item>@string/model_FurnitureOBJ_dresser_chiffonier4</item>
+	    <item>@string/model_FurnitureOBJ_entrance_shelter</item>
+	    <item>@string/model_FurnitureOBJ_fireplace1</item>
+	    <item>@string/model_FurnitureOBJ_fot01</item>
+	    <item>@string/model_FurnitureOBJ_fot05</item>
+	    <item>@string/model_FurnitureOBJ_fot06</item>
+	    <item>@string/model_FurnitureOBJ_fot07</item>
+	    <item>@string/model_FurnitureOBJ_fot08</item>
+	    <item>@string/model_FurnitureOBJ_gardenlight01</item>
+	    <item>@string/model_FurnitureOBJ_gardenlight02</item>
+	    <item>@string/model_FurnitureOBJ_glass_table</item>
+	    <item>@string/model_FurnitureOBJ_greek_vase2</item>
+	    <item>@string/model_FurnitureOBJ_greek_vase</item>
+	    <item>@string/model_FurnitureOBJ_guitar</item>
+	    <item>@string/model_FurnitureOBJ_helper_stool</item>
+	    <item>@string/model_FurnitureOBJ_lamp_living_room_2</item>
+	    <item>@string/model_FurnitureOBJ_lamp_living_room</item>
+	    <item>@string/model_FurnitureOBJ_lamp</item>
+	    <item>@string/model_FurnitureOBJ_mirror1</item>
+	    <item>@string/model_FurnitureOBJ_mirror2</item>
+	    <item>@string/model_FurnitureOBJ_mirror3</item>
+	    <item>@string/model_FurnitureOBJ_mirror4</item>
+	    <item>@string/model_FurnitureOBJ_mirror8</item>
+	    <item>@string/model_FurnitureOBJ_mirror9</item>
+	    <item>@string/model_FurnitureOBJ_monument_base</item>
+	    <item>@string/model_FurnitureOBJ_office1</item>
+	    <item>@string/model_FurnitureOBJ_playground1</item>
+	    <item>@string/model_FurnitureOBJ_playground2</item>
+	    <item>@string/model_FurnitureOBJ_playground3</item>
+	    <item>@string/model_FurnitureOBJ_railings</item>
+	    <item>@string/model_FurnitureOBJ_railings_stucco</item>
+	    <item>@string/model_FurnitureOBJ_saxofon</item>
+	    <item>@string/model_FurnitureOBJ_shelves1</item>
+	    <item>@string/model_FurnitureOBJ_shelves2</item>
+	    <item>@string/model_FurnitureOBJ_shutter</item>
+	    <item>@string/model_FurnitureOBJ_sol_key</item>
+	    <item>@string/model_FurnitureOBJ_spotlight01</item>
+	    <item>@string/model_FurnitureOBJ_table01</item>
+	    <item>@string/model_FurnitureOBJ_table02</item>
+	    <item>@string/model_FurnitureOBJ_table03</item>
+	    <item>@string/model_FurnitureOBJ_table10</item>
+	    <item>@string/model_FurnitureOBJ_table11</item>
+	    <item>@string/model_FurnitureOBJ_table12</item>
+	    <item>@string/model_FurnitureOBJ_table13</item>
+	    <item>@string/model_FurnitureOBJ_table14</item>
+	    <item>@string/model_FurnitureOBJ_table4</item>
+	    <item>@string/model_FurnitureOBJ_table5</item>
+	    <item>@string/model_FurnitureOBJ_table6</item>
+	    <item>@string/model_FurnitureOBJ_table7</item>
+	    <item>@string/model_FurnitureOBJ_table8</item>
+	    <item>@string/model_FurnitureOBJ_table9</item>
+	    <item>@string/model_FurnitureOBJ_trash_can_1</item>
+	    <item>@string/model_FurnitureOBJ_trash_can_2</item>
+	    <item>@string/model_FurnitureOBJ_trumpet</item>
+	    <item>@string/model_FurnitureOBJ_violin</item>-->
+	</array>
+    
+    <!-- HMP models -->
+    <string name="model_HMP_Terrain">Terrain.hmp</string>
+    <array name="models_HMP">
+        <item>@string/model_HMP_Terrain</item>
+    </array>
+    
+    <!-- IFC models -->
+    <string name="model_IFC_Haus">Haus.ifc</string>
+    <array name="models_IFC">
+        <!--<item>@string/model_IFC_Haus</item>-->
+    </array>
+    
+    <!-- IRR models -->
+    <array name="models_IRR">
+    </array>
+    
+    <!-- IRRMesh models -->
+    <array name="models_IRRMesh">
+    </array>
+    
+    <!-- LWO models -->
+    <array name="models_LWO">
+    </array>
+    
+    <!-- LWS models -->
+    <array name="models_LWS">
+    </array>
+    
+    <!-- MD2 models -->
+    <string name="model_MD2_bird_final">bird_final.md2</string>
+    <string name="model_MD2_dolphin">dolphin.md2</string>
+    <string name="model_MD2_faerie">faerie.md2</string>
+    <string name="model_MD2_fire">fire.md2</string>
+    <string name="model_MD2_flag">flag.md2</string>
+    <string name="model_MD2_horse">horse.md2</string>
+    <string name="model_MD2_sydney">sydney.md2</string>
+    <array name="models_MD2">
+        <item>@string/model_MD2_bird_final</item>
+        <item>@string/model_MD2_dolphin</item>
+        <item>@string/model_MD2_faerie</item>
+        <item>@string/model_MD2_fire</item>
+        <item>@string/model_MD2_flag</item>
+        <item>@string/model_MD2_horse</item>
+        <item>@string/model_MD2_sydney</item>
+    </array>
+    
+    <!-- MD5 models -->
+    <string name="model_MD5_SimpleCube">SimpleCube.md5mesh</string>
+    <array name="models_MD5">
+        <item>@string/model_MD5_SimpleCube</item>
+    </array>
+    
+    <!-- MDL models -->
+    <string name="model_MDL_minigun_mdl5">minigun_mdl5.mdl</string>
+    <string name="model_MDL_minigun">minigun.mdl</string>
+    <string name="model_MDL_PhosphoricAcid_MDl5">PhosphoricAcid_MDl5.mdl</string>
+    <string name="model_MDL_PhosphoricAcid_MDl7">PhosphoricAcid_MDl7.mdl</string>
+    <string name="model_MDL_Sphere">Sphere.mdl</string>
+    <array name="models_MDL">
+        <!--<item>@string/model_MDL_minigun_mdl5</item>
+        <item>@string/model_MDL_minigun</item>-->
+        <item>@string/model_MDL_PhosphoricAcid_MDl5</item>
+        <!--<item>@string/model_MDL_PhosphoricAcid_MDl7</item>-->
+        <item>@string/model_MDL_Sphere</item>
+    </array>
+    
+    <!-- MS3D models -->
+    <string name="model_MS3D_twospheres">twospheres.ms3d</string>
+    <string name="model_MS3D_Wuson">Wuson.ms3d</string>
+    <array name="models_MS3D">
+        <item>@string/model_MS3D_twospheres</item>
+        <item>@string/model_MS3D_Wuson</item>
+    </array>
+    
+    <!-- NFF models -->
+    <string name="model_NFF_cylinder">cylinder.nff</string>
+    <string name="model_NFF_dodecahedron">dodecahedron.nff</string>
+    <string name="model_NFF_hexahedron">hexahedron.nff</string>
+    <string name="model_NFF_ManyEarthsNotJustOne">ManyEarthsNotJustOne.nff</string>
+    <string name="model_NFF_octahedron">octahedron.nff</string>
+    <string name="model_NFF_positionTest">positionTest.nff</string>
+    <string name="model_NFF_spheres">spheres.nff</string>
+    <string name="model_NFF_tetrahedron">tetrahedron.nff</string>
+    <array name="models_NFF">
+        <item>@string/model_NFF_cylinder</item>
+        <item>@string/model_NFF_dodecahedron</item>
+        <item>@string/model_NFF_hexahedron</item>
+        <item>@string/model_NFF_ManyEarthsNotJustOne</item>
+        <item>@string/model_NFF_octahedron</item>
+        <item>@string/model_NFF_positionTest</item>
+        <item>@string/model_NFF_spheres</item>
+        <item>@string/model_NFF_tetrahedron</item>
+    </array>
+    
+    <!-- OBJ models -->
+    <string name="model_OBJ_box">box.obj</string>
+    <string name="model_OBJ_concave_polygon">concave_polygon.obj</string>
+    <string name="model_OBJ_empty_mat">empty_mat.obj</string>
+    <string name="model_OBJ_spider">spider.obj</string>
+    <string name="model_OBJ_WusonOBJ">WusonOBJ.obj</string>
+    <array name="models_OBJ">
+        <item>@string/model_OBJ_box</item>
+        <item>@string/model_OBJ_concave_polygon</item>
+        <item>@string/model_OBJ_empty_mat</item>
+        <item>@string/model_OBJ_spider</item>
+        <item>@string/model_OBJ_WusonOBJ</item>
+    </array>
+    
+    <!-- OFF models -->
+    <string name="model_OFF_Apple">Apple.off</string>
+    <string name="model_OFF_asu">asu.off</string>
+    <string name="model_OFF_block">block.off</string>
+    <string name="model_OFF_boxtorus">boxtorus.off</string>
+    <string name="model_OFF_casting">casting.off</string>
+    <string name="model_OFF_cone">cone.off</string>
+    <string name="model_OFF_cube">cube.off</string>
+    <string name="model_OFF_dinosaur">dinosaur.off</string>
+    <string name="model_OFF_dragon">dragon.off</string>
+    <string name="model_OFF_epcot">epcot.off</string>
+    <string name="model_OFF_goblet">goblet.off</string>
+    <string name="model_OFF_head">head.off</string>
+    <string name="model_OFF_heart">heart.off</string>
+    <string name="model_OFF_helm">helm.off</string>
+    <string name="model_OFF_house">house.off</string>
+    <string name="model_OFF_icosahedron">icosahedron.off</string>
+    <string name="model_OFF_king">king.off</string>
+    <string name="model_OFF_klingon">klingon.off</string>
+    <string name="model_OFF_monkey">monkey.off</string>
+    <string name="model_OFF_mushroom">mushroom.off</string>
+    <string name="model_OFF_O">O.off</string>
+    <string name="model_OFF_octahedron">octahedron.off</string>
+    <string name="model_OFF_octtorus">octtorus.off</string>
+    <string name="model_OFF_pear">pear.off</string>
+    <string name="model_OFF_r2">r2.off</string>
+    <string name="model_OFF_seashell">seashell.off</string>
+    <string name="model_OFF_sharp_sphere">sharp_sphere.off</string>
+    <string name="model_OFF_socket">socket.off</string>
+    <string name="model_OFF_space_shuttle">space_shuttle.off</string>
+    <string name="model_OFF_space_station">space_station.off</string>
+    <string name="model_OFF_sphere">sphere.off</string>
+    <string name="model_OFF_sphere2">sphere2.off</string>
+    <string name="model_OFF_Sword">Sword.off</string>
+    <string name="model_OFF_teapot">teapot.off</string>
+    <string name="model_OFF_tetrahedron">tetrahedron.off</string>
+    <string name="model_OFF_tetrahedralmc">tetrahedral-mc.off</string>
+    <string name="model_OFF_triangularmc">triangular-mc.off</string>
+    <string name="model_OFF_trimstar">trim-star.off</string>
+    <string name="model_OFF_twirl">twirl.off</string>
+    <string name="model_OFF_volkswagon">volkswagon.off</string>
+    <string name="model_OFF_Wuson">Wuson.off</string>
+    <string name="model_OFF_x29_plane">x29_plane.off</string>
+    <array name="models_OFF">
+        <item>@string/model_OFF_Apple</item>
+        <item>@string/model_OFF_asu</item>
+        <item>@string/model_OFF_block</item>
+	    <item>@string/model_OFF_boxtorus</item>
+	    <item>@string/model_OFF_casting</item>
+	    <item>@string/model_OFF_cone</item>
+	    <item>@string/model_OFF_cube</item>
+	    <item>@string/model_OFF_dinosaur</item>
+	    <item>@string/model_OFF_dragon</item>
+	    <item>@string/model_OFF_epcot</item>
+	    <item>@string/model_OFF_goblet</item>
+	    <item>@string/model_OFF_head</item>
+	    <item>@string/model_OFF_heart</item>
+	    <item>@string/model_OFF_helm</item>
+	    <item>@string/model_OFF_house</item>
+	    <item>@string/model_OFF_icosahedron</item>
+	    <item>@string/model_OFF_king</item>
+	    <item>@string/model_OFF_klingon</item>
+	    <item>@string/model_OFF_monkey</item>
+	    <item>@string/model_OFF_mushroom</item>
+	    <item>@string/model_OFF_O</item>
+	    <item>@string/model_OFF_octahedron</item>
+	    <item>@string/model_OFF_octtorus</item>
+	    <item>@string/model_OFF_pear</item>
+	    <item>@string/model_OFF_r2</item>
+	    <item>@string/model_OFF_seashell</item>
+	    <item>@string/model_OFF_sharp_sphere</item>
+	    <item>@string/model_OFF_socket</item>
+	    <item>@string/model_OFF_space_shuttle</item>
+	    <item>@string/model_OFF_space_station</item>
+	    <item>@string/model_OFF_sphere</item>
+	    <item>@string/model_OFF_sphere2</item>
+	    <item>@string/model_OFF_Sword</item>
+	    <item>@string/model_OFF_teapot</item>
+	    <item>@string/model_OFF_tetrahedron</item>
+	    <item>@string/model_OFF_tetrahedralmc</item>
+	    <item>@string/model_OFF_triangularmc</item>
+	    <item>@string/model_OFF_trimstar</item>
+	    <item>@string/model_OFF_twirl</item>
+	    <item>@string/model_OFF_volkswagon</item>
+	    <item>@string/model_OFF_Wuson</item>
+	    <item>@string/model_OFF_x29_plane</item>
+    </array>
+    
+    <!-- Ogre models -->
+    <array name="models_Ogre">
+    </array>
+    
+    <!-- PLY models -->
+    <string name="model_PLY_Cube">Cube.ply</string>
+    <string name="model_PLY_Dinosaur">Dinosaur.ply</string>
+    <string name="model_PLY_Wuson">Wuson.ply</string>
+    <array name="models_PLY">
+        <item>@string/model_PLY_Cube</item>
+        <item>@string/model_PLY_Dinosaur</item>
+        <item>@string/model_PLY_Wuson</item>
+    </array>
+    
+    <!-- Q3D models -->
+    <string name="model_Q3D_earth">earth.q3o</string>
+    <string name="model_Q3D_Eatat">Eatat.q3o</string>
+    <string name="model_Q3D_Wuson">Wuson.q3o</string>
+    <array name="models_Q3D">
+        <item>@string/model_Q3D_earth</item>
+        <item>@string/model_Q3D_Eatat</item>
+        <item>@string/model_Q3D_Wuson</item>
+    </array>
+    
+    <!-- RAW models -->
+    <string name="model_RAW_Colored">Colored.raw</string>
+    <string name="model_RAW_Textured">Textured.raw</string>
+    <string name="model_RAW_Wuson">Wuson.raw</string>
+    <array name="models_RAW">
+        <item>@string/model_RAW_Colored</item>
+        <item>@string/model_RAW_Textured</item>
+        <item>@string/model_RAW_Wuson</item>
+    </array>
+    
+    <!-- SMD models -->
+    <string name="model_SMD_Triangle">Triangle.smd</string>
+    <string name="model_SMD_Wuson">Wuson.smd</string>
+    <array name="models_SMD">
+        <item>@string/model_SMD_Triangle</item>
+        <item>@string/model_SMD_Wuson</item>
+    </array>
+    
+    <!-- STL models -->
+    <string name="model_STL_Human">Human.stl</string>
+    <string name="model_STL_SphereWithHole">SphereWithHole.stl</string>
+    <string name="model_STL_Spider_binary">Spider_binary.stl</string>
+    <string name="model_STL_triangle">triangle.stl</string>
+    <string name="model_STL_Wuson">Wuson.stl</string>
+    <array name="models_STL">
+        <item>@string/model_STL_Human</item>
+        <item>@string/model_STL_SphereWithHole</item>
+        <item>@string/model_STL_Spider_binary</item>
+        <item>@string/model_STL_triangle</item>
+        <item>@string/model_STL_Wuson</item>
+    </array>
+    
+    <!-- TER models -->
+    <array name="models_TER">
+    </array>
+    
+    <!-- WRL models -->
+    <string name="model_WRL_Human">Human.wrl</string>
+    <string name="model_WRL_Wuson">Wuson.wrl</string>
+    <array name="models_WRL">
+        <!--<item>@string/model_WRL_Human</item>
+        <item>@string/model_WRL_Wuson</item>-->
+    </array>
+    
+    <!-- X models -->
+    <array name="models_X">
+    </array>
+    
+    <!-- XGL models -->
+    <string name="model_XGL_Cubes">Cubes.zgl</string>
+    <string name="model_XGL_Epileptic">Epileptic.zgl</string>
+    <string name="model_XGL_Sample">Sample.xgl</string>
+    <string name="model_XGL_Sphere">Sphere.zgl</string>
+    <string name="model_XGL_Spider">Spider.zgl</string>
+    <string name="model_XGL_Wuson">Wuson.zgl</string>
+    <array name="models_XGL">
+        <item>@string/model_XGL_Cubes</item>
+        <item>@string/model_XGL_Epileptic</item>
+        <item>@string/model_XGL_Sample</item>
+        <item>@string/model_XGL_Sphere</item>
+        <item>@string/model_XGL_Spider</item>
+        <item>@string/model_XGL_Wuson</item>
+    </array>
+
+    <string name="button_back">Back</string>
+    <string name="empty"></string>
+</resources>
